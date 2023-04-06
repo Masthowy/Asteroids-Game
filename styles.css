@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #fff;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#home-screen,
+#game-over-screen {
+  text-align: center;
+}
+
+canvas {
+  display: block;
+}
+
+.star {
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--primary-color);
+}
+
+.wave {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--primary-color);
+}
