@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #fff;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#home-screen,
+#game-over-screen {
+  text-align: center;
+}
+
+canvas {
+  display: block;
+}
+
+.star {
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--primary-color);
+}
+
+.wave {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--primary-color);
+}
+
+/* Additional styling from your HTML file */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+canvas {
+    border: 1px solid #FFF;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay h1, .overlay h2, .overlay h3 {
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: #555;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #777;
+}

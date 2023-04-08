@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids Shooter</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        canvas {
+            border: 1px solid #FFF;
+        }
+
+        .overlay {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay h1, .overlay h2, .overlay h3 {
+            color: #FFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .overlay button {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: #FFF;
+            background-color: #555;
+            cursor: pointer;
+        }
+
+        .overlay button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600" style="display: none;"></canvas>
+    <div id="home-screen" class="overlay">
+        <h1>Asteroid Shooter</h1>
+        <h2>Last Score: <span id="last-score">0</span></h2>
+        <h2>High Score: <span id="high-score">0</span></h2>
+        <button id="start-button">Start Game</button>
+    </div>
+    <div id="game-over-screen" class="overlay" style="display: none;">
+        <h1>Game Over</h1>
+        <h2>Your Score: <span id="final-score">0</span></h2>
+        <button id="restart-button">Main Menu</button>
+    </div>
+    <div id="wave-screen" class="overlay" style="display: none;">
+        <h1>Wave <span id="wave-number">1</span></h1>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
